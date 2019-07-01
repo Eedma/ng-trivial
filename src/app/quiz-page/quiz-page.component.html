@@ -1,0 +1,38 @@
+<!--head-->
+<div class="jumbotron jumbotron-fluid bg-warning">
+  <div class="container">
+    <h1 class="display-4" routerLink="">It's Trivial!</h1>
+    <p class="lead">do your best, {{this.userData.userName}}</p>
+  </div>
+</div>
+
+<div class="container" *ngIf="this.handleApi.questions">
+
+  <div class="row">
+    <div class="col">
+      <h5 [innerHTML]="this.handleApi.questions[this.indexQuestion].question"></h5>
+    </div>
+  </div>
+
+  <!---inputs-->
+  <div class="alert" *ngFor="let answer of answers" (click)="answerChecker(answer)" [class.bg-success]="answer == correctAnswerSelected" [class.bg-danger]="answer == incorrectAnswerSelected" >
+    <div class="custom-control custom-radio">
+      <input type="radio" id="{{answer}}" name="customRadio" class="custom-control-input" value="{{answer}}"  [disabled]="disableButton">
+      <label class="custom-control-label" for="{{answer}}" [innerHTML]="answer"></label>
+    </div>
+  </div>
+  
+  <!--pagination-->
+  <div class="row">
+    <div class="col">
+      <nav class="d-flex justify-content-center mx-auto" *ngIf="nextButton" >
+          <ul class="pagination justify-content-center">
+            <li class="page-item">
+              <a class="page-link" (click)="goNextQuestion()">Next</a>
+            </li>
+          </ul>
+      </nav>
+    </div>
+  </div>
+  
+</div>

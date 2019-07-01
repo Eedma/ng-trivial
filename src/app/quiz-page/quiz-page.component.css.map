@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,MAAM,CAAA;EACF,MAAM,EAAC,iBAAiB;CAC3B;;AAED,AAAA,MAAM,AAAA,MAAM,CAAA;EACR,MAAM,EAAE,eAAe;CAC1B;;AAED,AAAA,qBAAqB,AAAA,SAAS,GAAC,qBAAqB,CAAA;EAChD,KAAK,EAAE,gBAAgB;CAC1B",
+    "sources": [
+        "quiz-page.component.scss"
+    ],
+    "names": [],
+    "file": "quiz-page.component.css"
+}
