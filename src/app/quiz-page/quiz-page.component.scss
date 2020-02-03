@@ -1,0 +1,11 @@
+.alert{
+    border:1px solid #e9ecef;
+}
+
+.alert:hover{
+    border: 1px solid black;
+}
+
+.custom-control-input:disabled~.custom-control-label{
+    color: black !important;
+}

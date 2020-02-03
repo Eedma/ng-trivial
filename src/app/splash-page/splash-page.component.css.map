@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,CAAC;EACD,MAAM,EAAG,IAAI;CAChB;;AAED,AAAA,MAAM,CAAA;EACF,UAAU,EAAE,IAAI;CACnB;;AAED,AAAA,IAAI,CAAA;EACA,UAAU,EAAE,IAAI;CACnB",
+    "sources": [
+        "splash-page.component.scss"
+    ],
+    "names": [],
+    "file": "splash-page.component.css"
+}

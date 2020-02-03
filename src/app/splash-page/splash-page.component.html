@@ -1,0 +1,40 @@
+<div class="jumbotron jumbotron-fluid" [class.bg-warning]="this.userData.userName && this._category && this._difficulty">
+  <div class="container">
+    <h1 class="display-4">Let's play Trivial</h1>
+    <p class="lead">I have few questions for you, let's start right now!</p>
+  </div>
+</div>
+
+<div class="container">
+  <form>
+    <div class="row">
+
+      <div class="col">
+        <label for="username">Insert your name</label>
+        <input type="text" class="form-control" id="username" [(ngModel)]="this.userData.userName" name="username">
+      </div>
+      
+      <div class="col">
+          <label class="my-1 mr-2" for="category">Select a category</label>
+          <select class="custom-select my-1 mr-sm-2" id="category" [(ngModel)]="_category" name="category">
+            <option selected>Choose...</option>
+            <option *ngFor="let data of categoryData" value="{{data.id}}">{{data.name}}</option>
+          </select>
+      </div>
+
+      <div class="col">
+          <label class="my-1 mr-2" for="difficulty">Select difficulty</label>
+          <select class="custom-select my-1 mr-sm-2" id="difficulty" [(ngModel)]="_difficulty" name="difficulty">
+            <option selected>Choose...</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-lg btn-block" [class.btn-warning]="this.userData.userName && this._category && this._difficulty" (click)="saveQuestionsData()">I'm ready!</button>
+  </form>
+  
+  
+</div>
